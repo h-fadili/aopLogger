@@ -24,5 +24,11 @@ public class UserManagementServiceImpl implements IUserManagementService {
 
 	}
 
+	@Override
+	@Loggable
+	public Integer deleteUser(Long userId) {
+		return 1;
+	}
+
 
 }

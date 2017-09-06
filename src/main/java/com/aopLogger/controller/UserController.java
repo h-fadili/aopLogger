@@ -10,13 +10,18 @@ import com.aopLogger.service.api.IUserManagementService;
 
 @RestController
 public class UserController {
-	
+
 	@Autowired
 	IUserManagementService userService;
-	
+
 	@RequestMapping("/user/{id}")
-    public User searchUser(@PathVariable("id") Long id) {
-        return userService.getUser(id);
-}
+	public User searchUser(@PathVariable("id") Long id) {
+		return userService.getUser(id);
+	}
+
+	@RequestMapping("/deleteUser/{id}")
+	public Integer deleteUser(@PathVariable("id") Long id) {
+		return userService.deleteUser(id);
+	}
 
 }

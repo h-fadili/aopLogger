@@ -5,5 +5,7 @@ import com.aopLogger.model.User;
 public interface IUserManagementService {
 	
 	User getUser(Long userId);
+	
+	Integer deleteUser(Long userId);
 
 }
